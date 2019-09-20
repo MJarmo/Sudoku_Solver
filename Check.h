@@ -9,27 +9,27 @@
 #define CHECK_H_
 
 struct Check
-	{
-		int mNr[9];
-		int mCounter[9 ];
+{
+	int mNr[9];
+	int mCounter[9];
 
-		Check()
+	Check()
+	{
+		for(int i=0;i<9;i++)
 		{
-			for(int i=0;i<9;i++)
-			{
 			mNr[i]=i+1;
 			mCounter[i]=0;
-			}
 		}
+	}
 
-void cleanCounter()
+	void cleanCounter()
 	{
 		for(int i=0;i<9;i++)
 		{
 			mCounter[i]=0;
 		}
 	}
-	};
+};
 
 
 

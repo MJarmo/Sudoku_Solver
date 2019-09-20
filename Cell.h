@@ -14,31 +14,37 @@ struct Cell
 {
 	int mValue;
 	bool mLock;
-	Cell(){}
+	Cell():mValue(0), mLock(false)
+	{}
+
 	Cell(int value)
 	{
-
-			mValue=value;
-			if(value!=0)
-			{
-				mLock=true;
-			}
-			else
-			{
-				mLock=false;
-			}
+		mValue=value;
+		if(value!=0)
+		{
+			mLock=true;
+		}
+		else
+		{
+			mLock=false;
+		}
 	}
 	void setValue(int value)
 	{
 		mValue=value;
 		if(value!=0)
-			{
-				mLock=true;
-			}
-			else
-			{
-				mLock=false;
-			}
+		{
+			mLock=true;
+		}
+		else
+		{
+			mLock=false;
+		}
+	}
+	void setFirstTime(int value)
+	{
+		mValue = value;
+		mLock = true;
 	}
 	void set(int v)
 	{
